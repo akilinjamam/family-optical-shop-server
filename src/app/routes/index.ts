@@ -24,6 +24,10 @@ import appointmentLogin from "../../modules/patient-login/patientLogin.route";
 import promoRouter from "../../modules/apply-promo-code/promocode.route";
 import metaRoute from "../../modules/metadata/metadata.route";
 import blogImgRouter from "../../modules/blogImage/blogImg.route";
+import { ProductRoutes } from "../../modules/fcb/product/product.route";
+import { SupplierRoutes } from "../../modules/fcb/supplier/supplier.route";
+import { CustomerFcbRoutes } from "../../modules/fcb/customer/customer.route";
+import { StockRoutes } from "../../modules/fcb/stock/stock.route";
 
 const router = express.Router();
 
@@ -129,8 +133,20 @@ const allRoutes = [
 		route: metaRoute,
 	},
 	{
-		path: "/promo",
-		route: promoRouter,
+		path: "/fcb-product",
+		route: ProductRoutes,
+	},
+	{
+		path: "/fcb-supplier",
+		route: SupplierRoutes,
+	},
+	{
+		path: "/fcb-customer",
+		route: CustomerFcbRoutes,
+	},
+	{
+		path: "fcb-stock",
+		route: StockRoutes,
 	},
 ];
 
