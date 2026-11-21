@@ -25,5 +25,5 @@ jobs:
             echo "Installing dependencies..."
             npm install
 
-            echo "build files...."
+            echo "build files now...."
             npm run build
